@@ -1,0 +1,30 @@
+{
+  "name": "github-webhooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --clear -r tsconfig-paths/register src/app.ts",
+    "build": "rimraf ./dist && tsc && tsc-alias",
+    "start": "node dist/app.js",
+
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "env-var": "^7.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "rimraf": "^5.0.5",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2"
+  }
+}
