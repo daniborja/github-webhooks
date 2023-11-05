@@ -2,6 +2,7 @@ import express from 'express';
 
 import { envs } from './config';
 import { GitHubController } from './presentation/github/github.controller';
+import { GitHubService } from './presentation/services';
 
 (() => {
   main();
@@ -12,8 +13,8 @@ function main() {
 
   app.use(express.json());
 
-
-  const controller = new GitHubController();
+  ///* DI
+  const controller = new GitHubController(new GitHubService());
 
   app.post('/api/github', controller.webhookHandler);
 
